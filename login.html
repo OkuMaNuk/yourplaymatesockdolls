@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Login - Your Playmate Sock Dolls</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/forms.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="site-header">
+        <h1>Customer Login</h1>
+    </header>
+
+    <main class="container">
+        <section class="form-card">
+            <h2>Returning Customer</h2>
+            <form id="loginForm">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required />
+
+                <label for="password">Password</label>
+                <input type="password" id="password" required />
+
+                <button type="submit" class="btn">Login</button>
+            </form>
+
+            <div id="loginMessage" class="success-message" style="display:none;">
+                Login successful! Redirecting to homepage...
+            </div>
+        </section>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="index.html" class="button">Return to Home</a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Your Playmate Sock Dolls, LLC</p>
+    </footer>
+
+    <script>
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      document.getElementById('loginMessage').style.display = 'block';
+      setTimeout(() => window.location.href = 'index.html', 2000);
+    });
+    </script>
+</body>
+</html>

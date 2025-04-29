@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Checkout - Your Playmate Sock Dolls</title>
+    <link rel="stylesheet" href="css/checkout.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="site-header">
+        <h1>Your Playmate Sock Dolls</h1>
+    </header>
+
+    <section class="hero">
+        <h2>Order Checkout</h2>
+        <p>Review your information and complete your purchase below.</p>
+    </section>
+
+    <main class="checkout-grid">
+        <section class="left-column">
+            <div class="card">
+                <h3>Customer Profile</h3>
+                <p><strong>Name:</strong> Jane Doe</p>
+                <p><strong>Email:</strong> jane@example.com</p>
+            </div>
+
+            <div class="card">
+                <h3>Shipping Information</h3>
+                <p><strong>Address:</strong> 123 Main St, Madison, WI 53703</p>
+                <p><strong>Delivery Option:</strong> UPS Two-Day</p>
+                <label><input type="checkbox" id="expedited-shipping" checked /> Expedited Shipping (+$10.00)</label>
+            </div>
+
+            <div class="card">
+                <h3>Billing Information</h3>
+                <p><strong>Billing Address:</strong> Same as shipping</p>
+                <p><strong>Credit Card:</strong> **** **** **** 1234</p>
+            </div>
+
+            <div class="card">
+                <h3>Payment</h3>
+                <p>All transactions are secure and encrypted.</p>
+                <label for="card">Credit Card Number</label>
+                <input type="text" id="card" placeholder="1234 5678 9012 3456" />
+                <label for="exp">Expiration</label>
+                <input type="text" id="exp" placeholder="MM/YY" />
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" placeholder="123" />
+            </div>
+        </section>
+
+        <section class="right-column">
+            <div class="card">
+                <h3>Shopping Cart</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Qty</th>
+                            <th>Price</th>
+                            <th>Extended</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items">
+                        <!-- Cart items here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <h3>Order Summary</h3>
+                <p><strong>Subtotal:</strong> <span class="summary-subtotal">$0.00</span></p>
+                <p><strong>Sales Tax (5.5%):</strong> <span class="summary-tax">$0.00</span></p>
+                <p><strong>Shipping:</strong> <span class="summary-shipping">$0.00</span></p>
+                <p><strong>Total:</strong> <span class="total-amount">$0.00</span></p>
+            </div>
+
+            <div class="submit-wrapper">
+                <a href="index.html" class="btn">Return to Home</a>
+                <a href="products.html" class="btn">Continue Shopping</a>
+                <a href="confirmation.html" class="btn">Submit Order</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Your Playmate Sock Dolls, LLC</p>
+    </footer>
+    <script src="js/cart-checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="site-header">
+        <h1>Thank You!</h1>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Your order has been placed successfully!</h2>
+            <p>We appreciate your support. A confirmation email will be sent to you shortly.</p>
+            <p id="order-number" style="margin-top: 1rem; font-weight: bold; font-size: 1.2rem;"></p>
+            <a href="index.html" class="button">Return to Home</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Your Playmate Sock Dolls, LLC</p>
+    </footer>
+
+    <script>
+        localStorage.removeItem('cart');
+        // Generate a random order number
+        function generateOrderNumber() {
+            const randomNum = Math.floor(100000 + Math.random() * 900000);
+            return `#ORDER${randomNum}`;
+        }
+
+        // Insert order number into the page
+        const orderNumberElement = document.getElementById('order-number');
+        if (orderNumberElement) {
+            orderNumberElement.textContent = `Your confirmation number is: ${generateOrderNumber()}`;
+        }
+    </script>
+</body>
+</html>

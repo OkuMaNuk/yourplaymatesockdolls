@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Cart - Your Playmate Sock Dolls</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="site-header">
+        <h1>Your Shopping Cart</h1>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Review Your Order</h2>
+            <p>Feel free to update quantities or remove items before proceeding to checkout.</p>
+        </section>
+
+        <section class="product-card">
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Qty</th>
+                        <th>Unit Price</th>
+                        <th>Subtotal</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- Cart items will be built dynamically by cart-checkout.js -->
+                </tbody>
+            </table>
+        </section>
+        <div class="cart-summary-wrapper">
+            <section class="card summary-card" style="max-width: 600px; margin: 2rem auto; text-align: right;">
+                <p><strong>Subtotal:</strong> <span class="summary-subtotal">$0.00</span></p>
+            </section>
+        </div>
+
+        <div class="submit-wrapper">
+            <a href="index.html" class="button">Return to Home</a>
+            <a href="products.html" class="button">Continue Shopping</a>
+            <a href="checkout.html" class="button">Proceed to Checkout</a>
+            <a href="" class="button" onclick="clearCartAndReload()">Empty Cart</a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Your Playmate Sock Dolls, LLC</p>
+    </footer>
+
+    <script src="js/cart-manager.js"></script>
+    <script src="js/cart-checkout.js"></script>
+</body>
+</html>

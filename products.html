@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - Your Playmate Sock Dolls</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/products.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="site-header">
+        <h1>Browse Our Sock Dolls</h1>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Our Collection</h2>
+            <p>Select your favorite sock doll to provide joy and comfort.</p>
+        </section>
+
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="images/SuperSnuggleSockDoll.jpg" alt="Super Snuggle Sock Doll">
+                <h3>Super Snuggle SockDoll</h3>
+                <p>Soft, warm, and always ready for hugs, perfect for little adventurers.</p>
+                <p class="price">$12.99</p>
+                <button class="button" onclick="handleAddToCart(1, 'Super Snuggle Sock Doll', 12.99)">Add to Cart</button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="images/RainbowHugBuddy.jpg" alt="Rainbow Hug Buddy">
+                <h3>Rainbow Hug Buddy</h3>
+                <p>Bright colors and big hugs – a rainbow of happiness in a buddy.</p>
+                <p class="price">$14.99</p>
+                <button class="button" onclick="handleAddToCart(2, 'Rainbow Hug Buddy', 14.99)">Add to Cart</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="images/SunshineCuddleFriend.jpg" alt="Sunshine Cuddle Friend">
+                <h3>Sunshine Cuddle Friend</h3>
+                <p>Bringing a ray of sunshine, warmth, and smiles to every child's heart.</p>
+                <p class="price">$13.49</p>
+                <button class="button" onclick="handleAddToCart(3, 'Sunshine Cuddle Friend', 13.49)">Add to Cart</button>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <img src="images/GentleJoySockPal.jpg" alt="Gentle Joy Sock Pal">
+                <h3>Gentle Joy Sock Pal</h3>
+                <p>A loyal and gentle bunny pal for calm and cozy moments when needed most.</p>
+                <p class="price">$11.99</p>
+                <button class="button" onclick="handleAddToCart(4, 'Gentle Joy Sock Pal', 11.99)">Add to Cart</button>
+            </div>
+        </div>
+        <div class="submit-wrapper">
+            <a href="index.html" class="button">Return to Home</a>
+            <a href="cart.html" class="button">View Cart</a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Your Playmate Sock Dolls, LLC</p>
+    </footer>
+
+    <div id="toast" class="hidden">Item added to cart!</div>
+
+    <script src="js/cart-manager.js"></script>
+    <script>
+        function handleAddToCart(id, name, price) {
+            const product = {
+                id: id,
+                name: name,
+                price: price
+            };
+            addToCart(product);
+        }
+    </script>
+</body>
+</html>
