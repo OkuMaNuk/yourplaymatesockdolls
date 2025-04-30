@@ -24,7 +24,7 @@ This is a working prototype eCommerce website developed as part of a Systems Ana
 
 ## Deployment
 
-Site is live on GitHub Pages [insert your link here].
+Site is live on GitHub Pages https://okumanuk.github.io/yourplaymatesockdolls/.
 
 ## Notes
 
